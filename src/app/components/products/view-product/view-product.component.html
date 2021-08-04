@@ -1,0 +1,21 @@
+<div class="view-product-content">
+    <div class="page-heading">
+        <h2>You Have Selected</h2>
+    </div>
+    <div class="product-details">
+        <div @fade @slideLeft class="product-image">
+            <img src="{{selectedProduct.path}}">
+        </div>
+        <div @fade class="product-content">
+            <p>Name: {{ selectedProduct.name }}</p>
+            <p>Price: Rs.{{ selectedProduct.price }}/-</p>
+            <p>Quantity: {{ quantity }}</p>
+            <div class="add-subtract-item">
+                <button (click) = "addItem()" class="quantity">+</button>
+                <button (click) = "removeItem()" class="quantity">-</button>
+            </div>
+            <button class="add-to-cart" (click) ="addToCart(selectedProduct.id)">Add To Cart</button>
+            <a routerLink="/products"><button class="go-back">Other Products</button></a>
+        </div>
+    </div>
+</div>

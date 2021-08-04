@@ -1,0 +1,13 @@
+<div class="nav">
+    <ul>
+        <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
+        <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+        <li><a routerLink="/products" routerLinkActive="active">Products</a></li>
+        <li><a routerLink="/branches" routerLinkActive="active">Branches</a></li>
+    </ul>
+    <h1>SunShade</h1>
+    <div class="cart-cartCount">
+        <p *ngIf="cartCount!=0">{{ cartCount }}</p>
+        <a routerLink="/cart" routerLinkActive="active" class="cart"><i class="fa fa-shopping-cart fa-lg fa-flip-horizontal" aria-hidden="true"></i></a>
+    </div>    
+</div>

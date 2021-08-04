@@ -1,0 +1,13 @@
+<div class="products-content">
+    <h2 >We Have</h2>
+<div class="all-products">
+    <div @fade *ngFor="let product of products" class="product-card" id="{{product.id}}">
+        <img src="{{product.path}}">
+        <div class="product-details">
+            <p class="name">{{product.name}}</p>
+            <p class="price">Price: Rs.{{product.price}}/-</p>
+            <button class="view-product" (click) = "displayProductDetails(product)">View Product</button>
+        </div>
+    </div>
+</div>
+</div>

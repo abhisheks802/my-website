@@ -1,0 +1,28 @@
+.footer-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #151515;
+    color: white;
+    overflow: hidden;
+}
+.social i.fa{
+    color: white;
+    font-size: 25px;
+}
+.social{
+    display: flex;
+    padding-top: 10px;
+}
+.social-box li{
+    list-style: none;
+    padding-right: 30px;
+}
+.copyright{
+    font-size: 15px;
+    color: #7C7C7C;
+    padding-bottom: 25px;
+}
+.copyright-2{
+    margin-bottom: -15px;
+}

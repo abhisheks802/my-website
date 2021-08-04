@@ -1,0 +1,24 @@
+<div class="cart-content">
+<div class="cart-heading">
+    <h2>YOUR SHOPPING CART</h2>
+</div>
+<div class="all-cart-products">
+    <div @fade *ngFor="let product of cart" class="cart-product-card" id="{{product.id}}">
+        <div class="product-image">
+            <img src="{{product.path}}">
+        </div>
+        <div class="product-details">
+            <p>Name: {{ product.name }}</p>
+            <p>Quantity: {{ product.quantity }}</p>
+            <p>Total Price: {{ product.quantity*product.price }}</p>
+            <button class="update-button" (click) ="showProduct(product)">Update</button>
+        </div>
+        <div>
+            <i class="fa fa-times cancel" aria-hidden="true" (click) = "removeProduct(product)"></i>
+        </div>
+    </div>    
+</div>
+<div>
+    <h3>Total amount to be paid: Rs.{{ bill }}</h3>
+</div>
+</div>

@@ -1,0 +1,75 @@
+.view-product-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: black;
+    color: white;
+    justify-content: center;
+    min-height: 100vh;
+    h2{
+        font-family: 'Permanent Marker', cursive;
+        margin-bottom: 60px;
+        margin-top: -10px;
+        font-size: 48px;
+    }
+}
+.product-details{
+    display: flex;
+    align-items: center;
+    img{
+        border-radius: 10px;
+        margin-left: -100px;
+    }
+    p{
+        font-size: 25px;
+        font-weight: bold;
+        line-height: 10px;
+    }
+}
+.product-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 100px;
+    margin-top: -20px;
+}
+.add-to-cart,.go-back{
+    width: 170px;
+    height: 50px;
+    font-size: 20px;
+    font-family: 'Philosopher', sans-serif;
+    font-weight: bold;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+.add-to-cart:hover{
+    background: green;
+    color: white;
+}
+.go-back:hover{
+    background: red;
+    color: white;
+}
+.add-to-cart{
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.quantity{
+    background: white;
+    color: black;
+    border: none;
+    margin-right: 10px;
+    font-size: 20px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.quantity:hover{
+    background: black;
+    color: white;
+}
+.add-subtract-item{
+    margin: 10px 0;
+}

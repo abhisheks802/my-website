@@ -1,0 +1,8 @@
+[
+    {"id": 1, "name": "Bluish Shades", "price": 300.00, "path":"/assets/images/1.jpg", "quantity":1},
+    {"id": 2, "name": "Matrix Shades", "price": 400.00, "path":"/assets/images/2.jpg", "quantity":1},
+    {"id": 3, "name": "Violet Shades", "price": 250.00, "path":"/assets/images/3.jpg", "quantity":1},
+    {"id": 4, "name": "United-Shades", "price": 400.00, "path":"/assets/images/4.jpg", "quantity":1},
+    {"id": 5, "name": "Classy-Shades", "price": 560.00, "path":"/assets/images/5.jpg", "quantity":1},
+    {"id": 6, "name": "Woody-Shades", "price": 600.00, "path":"/assets/images/6.jpg", "quantity":1}
+]

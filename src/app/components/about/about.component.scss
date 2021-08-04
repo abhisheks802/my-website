@@ -1,0 +1,36 @@
+.about-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    h2{
+        font-size: 45px;
+        font-family: 'Permanent Marker', cursive;
+        margin-top: -60px;
+        margin-bottom: 80px;
+    }
+    h3{
+        font-size: 32px;
+        margin-bottom: -5px;
+    }
+    p{
+        font-size: 19px;
+        line-height: 26px;
+    }
+}
+.main-content{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 70%;
+}
+.about-image img{
+    border-radius: 100px;
+    width: 360px;
+    margin-right: 50px;
+}
+.org-info{
+    width: 600px;
+    margin-top: -30px;
+}
