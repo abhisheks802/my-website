@@ -11,11 +11,3 @@ export let fade = trigger('fade',[
       animate(250)
     ]),
   ]);
-
-  export let slideLeft = trigger('slideLeft',[
-      state('void',style({ transform: 'translateX(-200px)'})),
-
-      transition(':enter',[
-          animate('800ms ease-out')
-      ])
-  ])

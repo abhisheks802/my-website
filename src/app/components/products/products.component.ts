@@ -10,7 +10,8 @@ import { animate, query, stagger, style, transition, trigger } from '@angular/an
   animations: [
     trigger('fade',[
       transition(':enter',[
-        query('img,div', style({ opacity:0, transform: 'translateX(-40px)'})),
+        query('img', style({ opacity:0, transform: 'translateX(40px)'})),
+        query('div', style({ opacity:0, transform: 'translateX(-40px)'})),
         query('img,div', stagger('300ms',[
           animate('500ms 150ms ease-out',style({ opacity:1, transform: 'translateX(0)' }))
         ]))

@@ -8,6 +8,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ProductService } from './services/product.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ViewProductComponent } from './components/products/view-product/view-product.component';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ViewProductComponent } from './components/products/view-product/view-pr
     NavBarComponent,
     routingComponents,
     FooterComponent,
-    ViewProductComponent
+    ViewProductComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

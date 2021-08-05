@@ -1,14 +1,22 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { fade, slideLeft } from 'src/app/animations/animations';
 import { ProductService } from 'src/app/services/product.service';
+import { animate, query, stagger, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-view-product',
   templateUrl: './view-product.component.html',
   styleUrls: ['./view-product.component.scss'],
   animations: [
-    fade,slideLeft
+    trigger('fade',[
+      transition(':enter',[
+        query('.product-content', style({ opacity:0, transform: 'translateX(40px)'})),
+        query('.product-image', style({ opacity:0, transform: 'translateX(-40px)'})),
+        query('.product-content,.product-image', stagger('300ms',[
+          animate('500ms 150ms ease-out',style({ opacity:1, transform: 'translateX(0)' }))
+        ]))
+      ])
+    ])
   ]
 })
 export class ViewProductComponent implements OnInit {
