@@ -1,13 +1,23 @@
 <div class="nav">
     <ul>
-        <li><a routerLink="/home" routerLinkActive="active">Home</a></li>
-        <li><a routerLink="/about" routerLinkActive="active">About</a></li>
-        <li><a routerLink="/products" routerLinkActive="active">Products</a></li>
-        <li><a routerLink="/branches" routerLinkActive="active">Branches</a></li>
+        <li><a routerLink="/home" routerLinkActive="active"  (click) = "hideLogoutButton()">Home</a></li>
+        <li><a routerLink="/about" routerLinkActive="active"  (click) = "hideLogoutButton()">About</a></li>
+        <li><a routerLink="/products" routerLinkActive="active"  (click) = "hideLogoutButton()">Products</a></li>
+        <li><a routerLink="/branches" routerLinkActive="active"  (click) = "hideLogoutButton()">Branches</a></li>
     </ul>
-    <h1>SunShade</h1>
+    <h1 (click) = "hideLogoutButton()" routerLink="/home">SunShade</h1>
     <div class="cart-cartCount">
-        <p *ngIf="cartCount!=0">{{ cartCount }}</p>
-        <a routerLink="/cart" routerLinkActive="active" class="cart"><i class="fa fa-shopping-cart fa-lg fa-flip-horizontal" aria-hidden="true"></i></a>
+        <div *ngIf="isAuthenticated" class="user-login">
+            <div class="account-details" (click)="showLogoutButton()">
+                <img alt="Profile Picture" src="{{ user.profilePicture }}">
+                <p class="firstName">Hi, {{ user.firstName }}</p>
+            </div>
+            <div @dropdown *ngIf="viewLogout" class="logout">
+                <p (click)="logout()">Logout</p>
+            </div>
+        </div>
+        <a routerLink="/login" *ngIf="!isAuthenticated" routerLinkActive="active" class="login"><i class="fa fa-user-circle" aria-hidden="true"></i>Login</a>
+        <p class="cart-count" *ngIf="cartCount!=0">{{ cartCount }}</p>
+        <a routerLink="/cart"  (click) = "hideLogoutButton()" routerLinkActive="active" class="cart"><i class="fa fa-shopping-cart fa-lg fa-flip-horizontal" aria-hidden="true"></i></a>
     </div>    
 </div>

@@ -62,3 +62,20 @@
 .update-button:hover{
     background: #f8ff7d;
 }
+.bill{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    button{
+        margin-top: -20px;
+        cursor: pointer;
+        width: 100px;
+        height: 40px;
+        background: black;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-size: 15px;
+    }
+}

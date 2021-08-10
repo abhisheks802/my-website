@@ -15,6 +15,8 @@ export class CartComponent implements OnInit {
 
   public cart:any = [];
   public bill:number=0;
+  isCartEmpty:boolean = false;
+  showbuyButton:boolean = false;
 
   constructor(private productService: ProductService, private router: Router) { }
 
@@ -23,6 +25,7 @@ export class CartComponent implements OnInit {
     for(let product of this.cart){
       this.bill = this.bill+product.quantity*product.price;
     }
+    
   }
   removeProduct(product:any){
     this.bill = this.bill - product.quantity*product.price;
@@ -36,5 +39,16 @@ export class CartComponent implements OnInit {
   showProduct(product:any){
     this.router.navigate(['/products',product.id]);
   }
-
+  checkOut(){
+    if(this.bill==0){
+      this.isCartEmpty = true;
+    }
+    else{
+      this.isCartEmpty = false;
+      this.productService.cart = [];
+      this.productService.cartCount = 0;
+      this.productService.getCartCount(this.productService.cartCount);
+      this.router.navigateByUrl('/checkOut');
+    }
+  }
 }

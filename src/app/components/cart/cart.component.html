@@ -18,7 +18,9 @@
         </div>
     </div>    
 </div>
-<div>
+<div class="bill">
     <h3>Total amount to be paid: Rs.{{ bill }}</h3>
+    <button type="submit" (click)="checkOut()" >Buy</button>
+    <p *ngIf="isCartEmpty">Cart is empty. Please add some items to the cart.</p>
 </div>
 </div>

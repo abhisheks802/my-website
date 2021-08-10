@@ -1,1 +1,18 @@
-<p>login works!</p>
+<div class="login-content">
+    <div @fade class="content">
+        <div class="heading">
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+            <div class="login-icon">
+                <h3>Login</h3>
+                <i class="fa fa-info-circle" (click)="enterCredentials()" (mouseenter)="ifInfoIcon=true" (mouseleave)="ifInfoIcon=false" aria-hidden="true"></i>
+            </div>
+            <p *ngIf="ifInfoIcon" class="login-credentials">Username- abhishek<br>Password- test1234</p>
+        </div>
+        <div class="login-details">
+            <input type="text" [(ngModel)]="username" placeholder="username" (keyup)="removeErrorMsg()" required>
+            <input type="password" [(ngModel)]="password" placeholder="password" (keyup)="removeErrorMsg()" required>
+            <p class="error-msg" *ngIf = "errorMsg">The email or password you enetered is incorrect.<br>Please try again.</p>
+            <button type="submit" (click)="signIn()">Sign in</button>
+        </div>
+    </div>
+</div>

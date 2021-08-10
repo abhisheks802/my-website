@@ -1,0 +1,76 @@
+.login-content{
+    min-height: 100vh;
+    background: black;
+    display: flex;
+    justify-content: center;
+}
+.content{
+    padding-top: 10%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3{
+        margin-top: 15px;
+        font-size: 28px;
+    }
+    .fa{
+        color: white;
+        font-size: 70px;
+    }
+}
+.login-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    input{
+        height: 40px;
+        width: 220px;
+        padding-left: 15px;
+        margin-bottom: 15px;
+        border: none;
+        border-radius: 10px;
+    }
+    button{
+        height: 35px;
+        width: 150px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        background: white;
+        font-size: 15px;
+        margin-top: 10px;
+        font-weight: bold;
+        font-family: 'Philosopher', sans-serif;
+    }
+    button:hover{
+        background: lightgreen;
+    }
+    textarea:focus, input:focus{
+        outline: none;
+    }
+}
+.error-msg{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    margin-top: 0;
+}
+.login-icon{
+    display: flex;
+    align-items: center;
+    .fa{
+        margin-left: 10px;
+        margin-top: -5px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+}
+.login-credentials{
+    position: fixed;
+    margin-top: -20px;
+    background: rgba(0,0,0,0.7);
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
